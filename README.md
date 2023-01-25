@@ -50,3 +50,17 @@ return 할 때는 이름을 ``hello-template``이라고 해주고,
 model에는 ``name:입력한 스트링 값``을 넣어준다     
 --> viewResovler가 ``template/hello-template.html``을 찾아서     
 --> Thymeleaf 템플릿 엔진이 html로 변환한 후 웹 브라우저에 준다
+
+### API
+``@ResponseBody``를 사용하면 ``viewResovler``를 사용하지 않고 ``HTTP의 BODY``에 문자내용을 직접 반환
+<br><br> 
+
+웹 브라우저에서 ``locallhost:8080/hello-api``로 내장 톰켓 서버에 요청   
+--> 스프링 컨테이너에 있는 ``helloController``에 있는 해당 ``helloApi``를 매핑해서 호출해주는데,
+``@ResponseBody``가 붙어있으면 http 응답에 그대로 넘기는데 만약, 객체 오면 디폴트는 json 방식으로 데이터를 만들어서 http 응답에 반응한다     
+--> ``HttpMessageConverter``가 단순문자면 'StringConverter', 객체면 'JsonConverter'가 동작해서 바꿔서 
+  * 기본 문자처리: ``StringHttpMessageConverter``
+  * 기본 객체처리: ``MappingJackson2HttpMessageConverter``
+
+--> 바꾼 것을 브라우저나 서버에 보냄
+

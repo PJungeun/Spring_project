@@ -20,16 +20,16 @@ public class HelloController {
         model.addAttribute("name", name);
         return "hello-template";
     }
+
     @GetMapping("hello-string")
-    @ResponseBody //http의 body의 data를 직접 넣어주겠다는 것. html-template이런게 아니라 그대로 넘겨주는 것
+    @ResponseBody //http의 body 부분에 data를 직접 넣어주겠다는 것. html-template(view)이런게 아니라 그대로 넘겨주는 것
     public String helloString(@RequestParam("name") String name){
         return "hello " + name;
     }
 
     @GetMapping("hello-api")
     @ResponseBody
-    public Hello helloApi(@RequestParam("name") String name){
-//        json 방식.(html같은 xml방식은 무겁고 태그 두번쓰고 그래야하는데 json은 name-value로 심플해서 많이 사용)
+    public Hello helloApi(@RequestParam("name") String name){ //json 방식.(html같은 xml방식은 무겁고 태그 두번쓰고 그래야하는데 json은 name-value로 심플해서 많이 사용)
         Hello hello = new Hello();
         hello.setName(name);
         return hello;
@@ -37,6 +37,7 @@ public class HelloController {
 
     static class Hello{
         private String name;
+        // getter&setter: ^+ent
         public String getName(){
             return name;
         }
