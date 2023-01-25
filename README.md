@@ -35,3 +35,11 @@
 1. ```./gradlew build```
 2. ```cd build/libs```
 3. ```java -jar hello-spring-0.0.1-SNAPSHOT.jar```
+
+<hr>
+
+### 정적 컨텐츠
+웹 브라우저에서 ``locallhost:8080/hello-static.html``로 내장 톰켓 서버에 요청하면,
+스프링 컨테이너에 있는 관련 controller없이 바로 ``resources: static/hello-static.html``로 가서,
+``hello-static.html``을 웹브라우저로 가져옴
+
