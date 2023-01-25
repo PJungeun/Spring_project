@@ -24,6 +24,14 @@
   * spring-test: 스프링 통합 테스트 지원
 
 <hr>
--
-```static/index.html```을 올려두면 spring boot가 welcome page 기능 제공
 
+* ```static/index.html```을 올려두면 spring boot가 welcome page 기능 제공
+
+<hr>
+
+## 빌드하고 실행하는 방법
+
+콘솔에서
+1. ```./gradlew build```
+2. ```cd build/libs```
+3. ```java -jar hello-spring-0.0.1-SNAPSHOT.jar```
