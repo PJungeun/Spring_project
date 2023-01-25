@@ -39,7 +39,14 @@
 <hr>
 
 ### 정적 컨텐츠
-웹 브라우저에서 ``locallhost:8080/hello-static.html``로 내장 톰켓 서버에 요청하면,
-스프링 컨테이너에 있는 관련 controller없이 바로 ``resources: static/hello-static.html``로 가서,
+웹 브라우저에서 ``locallhost:8080/hello-static.html``로 내장 톰켓 서버에 요청   
+--> 스프링 컨테이너에 있는 관련 controller없이 바로 ``resources: static/hello-static.html``로 가서,
 ``hello-static.html``을 웹브라우저로 가져옴
 
+### MVC
+웹 브라우저에서 ``locallhost:8080/hello-mvc``로 내장 톰켓 서버에 요청   
+--> 스프링 컨테이너에 있는 ``helloController``에 있는 해당 ``helloMvc``를 매핑해서 호출해주는데,
+return 할 때는 이름을 ``hello-template``이라고 해주고,
+model에는 ``name:입력한 스트링 값``을 넣어준다     
+--> viewResovler가 ``template/hello-template.html``을 찾아서     
+--> Thymeleaf 템플릿 엔진이 html로 변환한 후 웹 브라우저에 준다

@@ -15,8 +15,8 @@ public class HelloController {
     }
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam(value = "name") String name, Model model){
-//        외부에서 받는 것, ex, http://localhost:8080/hello-mvc?name=spring!!!!!!!!!!
-//        ?name=spring!!!!!!!!!! 이 부분
+//        외부에서 받는 것, ex, http://localhost:8080/hello-mvc?name=spring!
+//        ?name=spring! 이 부분
         model.addAttribute("name", name);
         return "hello-template";
     }
