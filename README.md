@@ -22,3 +22,8 @@
     * mock: 모의, 가짜의. 테스트할 때 필요한 실제 객체와 동일한 모의 객체를 만들어 테스트의 효용성을 높이기 위해 사용
   * assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
   * spring-test: 스프링 통합 테스트 지원
+
+<hr>
+-
+```static/index.html```을 올려두면 spring boot가 welcome page 기능 제공
+

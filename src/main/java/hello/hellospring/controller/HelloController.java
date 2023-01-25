@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
+@Controller //@Controller 어노테이션이 적용된 클래스가 Controller임을 나타내고 사용가능
 public class HelloController {
-    @GetMapping("hello") //get방식에 그 get
-    public  String hello(Model model){
+    @GetMapping("hello") //GET 요청방식에 그 GET. GET 방식: 서버의 리소스에 데이터 요청/POST: 서버의 리소스를 새로 생성 및 업뎃 위해 데이터 보냄
+    public String hello(Model model){
         model.addAttribute("data", "hello!!");
         return "hello"; // resources:templates/에 hello.html 찾아서 랜더링
     }
