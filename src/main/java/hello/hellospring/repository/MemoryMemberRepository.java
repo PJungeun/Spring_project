@@ -1,9 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository //spring 뜰 때 repository 가지고 온다
 public class MemoryMemberRepository implements MemberRepository{ //회원 리포지토리 메모리 구현체
 
     //Map<key, value>: key 중복x, value 중복o
