@@ -13,12 +13,12 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class MemberServiceTest {
+class MemberServiceTest { //회원 서비스 테스트
 
     MemberService memberService;
     MemoryMemberRepository memberRepository = new MemoryMemberRepository();
 
-    @BeforeEach
+    @BeforeEach //각 테스트 실행 전 호출되어 테스트가 서로 영향 없도록 항상 새로운 객체를 생성하고 의존관계도 새로
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);

@@ -10,21 +10,21 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class MemoryMemberRepositoryTest {
+public class MemoryMemberRepositoryTest { //회원 리포지토리 메모리 구현체 테스트
      MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    @AfterEach
+    @AfterEach //각 테스트가 종료될 때마다 실행하여 직전 테스트의 결과가 DB에 남지 않도록
     public void afterEach(){
         repository.clearStore();
     }
-    @Test
+    @Test //@Test 붙은 메소드가 테스트 수행하는 메소드
     public void save(){
         Member member = new Member();
         member.setName("spring");
 
         repository.save(member);
 
-        Member result = repository.findById(member.getId()).get();
+        Member result = repository.findById(member.getId()).get(); //meber에서 id가져와서 그 id의 값(name)을 가져옴
 //        Assertions.assertEquals(member, result);
         assertThat(member).isEqualTo(result);
     }

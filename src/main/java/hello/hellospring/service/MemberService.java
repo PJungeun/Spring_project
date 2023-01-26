@@ -7,12 +7,12 @@ import hello.hellospring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class MemberService {
+public class MemberService { //회원 서비스 개발
 
-    private final MemberRepository memberRepository;
+    private final MemberRepository memberRepository;  //final: 수정x
 
     public MemberService(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
+        this.memberRepository = memberRepository; //회원 서비스 코드를 DI 가능하게. DI(의존관계 주입): 의존관계를 외부에서 결정하고 주입하는 것
     }
 
     /**
