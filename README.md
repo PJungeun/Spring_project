@@ -6,8 +6,10 @@
 * Language: Java
 * Packaging: Jar
 * Java: 11     
+
 <br>
-* Build and run using: Gradle IntelliJ IDEA
+
+* Build and run using: Gradle IntelliJ IDEA  
 * Run tests using: Gradle IntelliJ IDEA
 
 <br><br>
@@ -25,12 +27,10 @@
   * spring-test: 스프링 통합 테스트 지원
 
 <br><br>
-<hr>
 
 * ```static/index.html```을 올려두면 spring boot가 welcome page 기능 제공
 
 <br><br>
-<hr>
 
 ## 빌드하고 실행하는 방법
 
